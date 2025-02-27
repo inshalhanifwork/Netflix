@@ -1,1 +1,38 @@
 # Netflix
+Its a dataset i took from online and done analysis
+
+i created all plots by using this code in R language
+
+install.packages("ggplot2")
+install.packages("dplyr")
+
+library(ggplot2) library(dplyr)
+
+df <- Netflix.Engagement.Dataset
+
+head(df) # Shows first few rows str(df) # Shows structure of dataset
+
+df$Churn.Status <- as.factor(df$Churn.Status) df$Payment.History <- as.factor(df$Payment.History) df$Subscription.Plan <- as.factor(df$Subscription.Plan)
+
+#Customer Churn Analysis
+
+ggplot(df, aes(x = Churn.Status, fill = Churn.Status)) + geom_bar() + labs(title = "Customer Churn Analysis", x = "Churn Status", y = "Count of Customers") + theme_minimal()
+
+#Churn Status vs Subscription Length
+
+ggplot(df, aes(x = Churn.Status, fill = as.factor(df$Subscription.Length..Months.))) + geom_bar(position = "dodge") + labs(title = "Churn Status vs Subscription Length", x = "Churn Status", y = "Count", fill = "Subscription Length (Months)") + theme_minimal()
+
+#Churn Status vs Engagement Rate
+
+ggplot(df, aes(x = Churn.Status, fill = as.factor(df$Engagement.Rate..1.10.))) + geom_bar(position = "dodge") + labs(title = "Churn Status vs Engagement Rate", x = "Churn Status", y = "Count", fill = "Engagement Rate") + theme_minimal()
+
+#Churn Status vs Payment History
+
+ggplot(df, aes(x = Churn.Status, fill = df$Payment.History..On.Time.Delayed.)) + geom_bar(position = "dodge") + labs(title = "Churn Status vs Payment History", x = "Churn Status", y = "Count", fill = "Payment History") + theme_minimal()
+
+Churn Status vs Number of Subscribers
+ggplot(df, aes(x = Churn.Status)) + geom_bar(fill = "steelblue") +
+geom_text(stat = "count", aes(label = ..count..), vjust = -0.5) +
+labs(title = "Churn Status vs Number of Subscribers", x = "Churn Status", y = "Number of Subscribers") + theme_minimal()
+
+Churn analysis revealed that 50.7% (1,778 users) have canceled their subscription, while 49.3% (1,728 users) have retained it. The high churn rate indicates a need for improved retention strategies. Personalized content, flexible pricing, and engagement initiatives can help reduce churn. Additionally, analyzing payment history may provide insights into whether delayed payments contribute to cancellations. These findings can assist Netflix in enhancing user experience and minimizing churn.
