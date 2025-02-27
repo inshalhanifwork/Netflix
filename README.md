@@ -1,7 +1,4 @@
 # Netflix
-Its a dataset i took from online and done analysis
-
-i created all plots by using this code in R language
 
 install.packages("ggplot2")
 install.packages("dplyr")
