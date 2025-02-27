@@ -26,6 +26,17 @@ ggplot(df, aes(x = Churn.Status, fill = as.factor(df$Subscription.Length..Months
 
 ggplot(df, aes(x = Churn.Status, fill = as.factor(df$Engagement.Rate..1.10.))) + geom_bar(position = "dodge") + labs(title = "Churn Status vs Engagement Rate", x = "Churn Status", y = "Count", fill = "Engagement Rate") + theme_minimal()
 
+Description of the Graph: "Churn Status vs Engagement Rate"
+This bar chart compares customer engagement levels for those who have churned ("Yes") and those who have not churned ("No"). The x-axis represents the churn status, while the y-axis represents the number of customers. Different colors represent different engagement rates.
+
+Key Insights:
+Similar Distribution: The engagement rate distribution is similar for both churned and non-churned customers.
+Higher Engagement Does Not Prevent Churn: Even customers with higher engagement levels still churn, indicating that engagement alone does not ensure retention.
+Balanced Proportions: Each engagement level has a similar count across both churned and retained customers.
+Implications:
+Content quality, pricing, or external factors may influence churn more than just engagement.
+Additional factors like customer experience, payment flexibility, and service satisfaction need to be analyzed.
+
 # Churn Status vs Payment History
 
 ggplot(df, aes(x = Churn.Status, fill = df$Payment.History..On.Time.Delayed.)) + geom_bar(position = "dodge") + labs(title = "Churn Status vs Payment History", x = "Churn Status", y = "Count", fill = "Payment History") + theme_minimal()
