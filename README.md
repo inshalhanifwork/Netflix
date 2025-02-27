@@ -38,7 +38,7 @@ labs(title = "Churn Status vs Number of Subscribers", x = "Churn Status", y = "N
 ## Churn analysis revealed that 50.7% (1,778 users) have canceled their subscription, while 49.3% (1,728 users) have retained it. The high churn rate indicates a need for improved retention strategies. Personalized content, flexible pricing, and engagement initiatives can help reduce churn. Additionally, analyzing payment history may provide insights into whether delayed payments contribute to cancellations. These findings can assist Netflix in enhancing user experience and minimizing churn.
 
 ## What factors influence whether a customer churns or stays subscribed?
-# Engagement Rate: Higher engagement does not always prevent churn.
+Engagement Rate: Higher engagement does not always prevent churn.
 Number of Subscribers: Churn is not significantly affected by total subscribers.
 Payment History: Customers with delayed payments are more likely to churn.
 Subscription Length: Short-term subscribers have a higher churn rate.
@@ -49,7 +49,7 @@ Implement reminders or flexible payment options.
 Enhance customer experience through better content and support.
 
 ## How does daily watch time impact customer satisfaction?
-# High engagement indicates active users, but churn still occurs.
+High engagement indicates active users, but churn still occurs.
 Watch time alone does not ensure satisfaction; content quality and service reliability matter.
 🔹 Solutions:
 
